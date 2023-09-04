@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Prince Form</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="main_container">
+      <form id="contact-form" name="myForm" onsubmit="return princeObj.validateForm()">
+      <!-- <form id="contact-form" name="myForm"> -->
+        <!-- Name -->
+        <div class="form_elements">
+          <label for="name">*Name :</label><br />
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Enter your name"
+            class="input"
+            
+          />
+          <div class="formError name" ></div>
+        </div>
+
+        <br />
+
+        <!-- Email -->
+        <div class="form_elements">
+          <label for="email">*E-mail :</label><br />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter your E-mail"
+            class="input"
+            
+          />
+          <div class="formError email" ></div>
+        </div>
+
+        <br />
+
+        <!-- Password -->
+        <div class="form_elements">
+          <label for="password">*Password :</label><br />
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Enter your Password"
+            class="input"
+          />
+          <div class="formError password" ></div>
+        </div>
+
+        <br />
+
+        <!-- Select Age -->
+        <div class="form_elements">
+          <label for="age">Age :</label><br />
+          <input
+            type="number"
+            name="age"
+            id="age"
+            placeholder="Enter your age"
+            class="input"
+          />
+          <div class="formError" ></div>
+        </div>
+
+        <br />
+
+        <!-- Phone Number -->
+        <div class="form_elements">
+          <label for="number">*Phone Number :</label><br />
+          <input
+            type="number"
+            name="phone"
+            id="phone"
+            placeholder="Enter your Phone no."
+            class="input"
+          />
+          <div class="formError phone" ></div>
+        </div>
+
+        <br />
+
+        <!-- Select Gender -->
+        <div class="form_elements">
+          <b>*Select Gender :</b>
+          <br />
+          <input type="radio" name="gender" id="male" value="Male" />
+          <label for="male">Male</label><br />
+
+          <input type="radio" name="gender" id="female" value="Female" />
+          <label for="female">Female</label>
+
+          <div class="formError gender" ></div>
+        </div>
+
+        <br />
+
+        <!-- Select Subjects -->
+        <div class="form_elements">
+          <b>*Select Subjects :</b>
+          <br />
+          <input type="checkbox" name="subject" id="maths" value="Maths" />
+          <label for="maths">Maths</label>
+
+          <input type="checkbox" name="subject" id="science" value="Science" />
+          <label for="science">Science</label>
+
+          <input type="checkbox" name="subject" id="english" value="English" />
+          <label for="english">English</label>
+
+          <div class="formError subject" ></div>
+        </div>
+
+        <br />
+
+        <!-- Upload File -->
+        <div class="form_elements">
+          <label for="fileselect">*Upload :</label>
+          <input type="file" name="upload" id="fileselect" />
+
+          <div class="formError upload" ></div>
+        </div>
+
+        <br />
+
+        <!-- Select Country -->
+        <div class="form_elements">
+          <label for="country">Country :</label>
+          <select name="country" id="country" class="input">
+            <option name="myCountry" value="India">India</option>
+            <option name="myCountry" value="Sri Lanka">Sri Lanka</option>
+            <option name="myCountry" value="Australia">Australia</option>
+          </select>
+        </div>
+
+        <!-- Description -->
+        <div class="form_elements" id="desc">
+          <label for="Description">Description :</label>
+          <br />
+          <textarea
+            placeholder="Tell us about yourself"
+            rows="10"
+            cols="30"
+            name="Description"
+            class="description"
+            id="description"
+          ></textarea>
+        </div>
+
+        <br />
+
+        
+
+        <input class="btn" type="submit" value="SUBMIT">
+      </form>
+
+
+      <div class="showOutput">
+        <!-- Form output in Json Object format -->
+        <div class="outputHead">
+          <h2>Data in JSON Format</h2>
+          <pre class="output-json"></pre>
+        </div>
+
+        <!-- Form Output in array format -->
+        <div class="outputHead">
+          <h2>Data in Array Format</h2>
+          <pre class="output-array"></pre>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
